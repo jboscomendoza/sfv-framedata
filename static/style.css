@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+
+html {
+    font-family: 'Oxygen', sans-serif;
+    background: #eee;
+}
+
+body {
+    max-width: 1000px; 
+    margin: auto;
+    padding: .5rem;
+    line-height: 1.25;
+}
+
+h1, h3 {
+    text-align: center;
+    padding:.5rem 0 .5rem 1rem;
+    margin: 0px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-chars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: .5rem;
+    max-width: 100%;
+}
+
+.cell-stats {
+    display: grid;
+    max-width: 100%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.cell-title {
+    display:grid;
+    max-width: 100%;
+    color: #eee;
+    background-color: #445;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .25rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.img-index {
+    border-radius: 0 0 5px 5px;
+}
+
+.char-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+      "c-pic c-hed c-hed c-hed c-hed"
+      "c-pic c-fst c-fst c-rev c-rev"
+      "c-pic c-dfw c-dfw c-dbw c-dbw"
+}
+
+.char-head {
+    display: grid;
+    background: #445;
+    color: #eee;
+    border-radius: 0 5px 0 0;
+    grid-area: c-hed;
+}
+
+.char-pic {
+    display: grid;
+    background: #445;
+    border-radius: 5px 0 0 5px;
+}
+
+.char-portrait {
+    width: auto;
+    height: 7rem;
+    margin: auto;
+}
+
+.char-name {
+    display: grid;
+    background: #445;
+    color: #eee;
+}
+
+.char-value {
+    display: grid;
+    background: #eee;
+    color: #445;
+}
+
+
+.grid-fd {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+}
+
+.fd-container {
+    text-align: center;
+    background: #445;
+    color: #eee;
+    display: grid;
+    border: .5px solid #eee;
+    border-radius: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1.75rem 1.75rem minmax(2rem, auto);
+    grid-template-areas:
+      "fd-hed   fd-hed   fd-hed   fd-hed    fd-hed"
+      "fd-nam-S fd-nam-A fd-nam-R fd-nam-oH fd-nam-oB"
+      "fd-val-S fd-val-A fd-val-R fd-val-oH fd-val-oB";
+    align-items: stretch;
+}
+
+.fd-head {
+    display: grid;
+    grid-area: fd-hed;
+    font-weight: bold;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    overflow-wrap: anywhere;
+}
+
+.fd-name {
+    display: grid;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    justify-self: stretch;
+}
+
+.fd-value {
+    display: grid;
+    background: #eee;
+    color: #445;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    overflow-wrap: anywhere;
+}
