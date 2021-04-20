@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}SFV Frame Data{% endblock %}
+
+{% block content %}
+
+<h1>
+  Street Fighter V - Frame Data
+</h1>
+
+<div class="grid-chars">
+    {% for char in char_names %}
+    <div class="cell-stats">
+      <div class="cell-title">
+        {{ char }}
+      </div>
+      <div>
+        <a href={{ url_for("character_page", char = char) }}>
+          <img 
+            class="img-index"
+            src={{url_for('static', filename = "img-char/"+char+".jpg")}}
+          >
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %} {{ char }} Frame Data {% endblock %}
+
+{% block content %}
+
+<div class="char-container">
+    <div class="char-head">
+        <h1>
+            {{ char }}
+        </h1>
+    </div>
+
+    <div class="char-pic" style="grid-area:c-pic">
+        <img class="char-portrait" src={{url_for('static', filename = "img-port/"+char+".png")}}>
+    </div>
+
+    {% for key, value in stat_dict.items() %}
+        <div style={{ "grid-area:c-"+key }}>
+            <div class="char-name">
+                {{ value["nombre"] }}
+            </div>
+            <div class="char-value">
+                {{ value["valor"] }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="grid-fd">
+    {% for key, value in fd_dict.items() %}
+        <div class="fd-container">
+            
+            <div class="fd-head">
+                {{ key }}
+            </div>
+            
+            {% for tipo, frame in value.items() %}
+                <div class= "fd-name" style={{ "grid-area:fd-nam-"+tipo }}>
+                    {{ tipo }}
+                </div>
+                <div class= "fd-value" style={{ "grid-area:fd-val-"+tipo }}>
+                    {{ frame }}
+                </div>
+            {% endfor %}
+
+        </div>
+    {% endfor %}
+</div>
+
+<div>
+    <a href={{ url_for("index") }}>
+        Inicio
+    </a>
+</div>
+
+{% endblock %}
