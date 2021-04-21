@@ -26,10 +26,19 @@ img {
     height: auto;
 }
 
-.grid-chars {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 100%;
+@media (min-width: 200px) {
+    .grid-chars {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+    }
+}
+@media (min-width: 1000px) {
+    .grid-chars {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 100%;
+    }
 }
 
 .cell-stats {
@@ -94,11 +103,39 @@ img {
 }
 
 
-.grid-fd {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 100%;
+@media (min-width: 200px) {
+    .grid-fd {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+    }
 }
+
+@media (min-width: 1000px) {
+    .grid-fd {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
+    }
+}
+
+.fd-container {
+    text-align: center;
+    background: #445;
+    color: #eee;
+    display: grid;
+    border-right: .5px solid #eee;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1.75rem 1.75rem minmax(2rem, auto);
+    grid-template-areas:
+        "fd-hed   fd-hed   fd-hed   fd-hed    fd-hed"
+        "fd-nam-S fd-nam-A fd-nam-R fd-nam-oH fd-nam-oB"
+        "fd-val-S fd-val-A fd-val-R fd-val-oH fd-val-oB";
+    align-items: stretch;
+}
+
+    
+
 
 .fd-container {
     text-align: center;
