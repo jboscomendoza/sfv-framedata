@@ -7,10 +7,12 @@ html {
 }
 
 body {
+    font-family: 'Oxygen', sans-serif;
     max-width: 1000px; 
     margin: auto;
     padding: .5rem;
     line-height: 1.25;
+    background: #eee;
 }
 
 h1, h3 {
@@ -27,7 +29,6 @@ img {
 .grid-chars {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: .5rem;
     max-width: 100%;
 }
 
@@ -35,7 +36,6 @@ img {
     display: grid;
     max-width: 100%;
     text-align: center;
-    border-radius: 5px;
 }
 
 .cell-title {
@@ -47,11 +47,10 @@ img {
     font-size: 1rem;
     font-weight: bold;
     padding: .25rem;
-    border-radius: 5px 5px 0 0;
 }
 
 .img-index {
-    border-radius: 0 0 5px 5px;
+    
 }
 
 .char-container {
@@ -68,14 +67,12 @@ img {
     display: grid;
     background: #445;
     color: #eee;
-    border-radius: 0 5px 0 0;
     grid-area: c-hed;
 }
 
 .char-pic {
     display: grid;
     background: #445;
-    border-radius: 5px 0 0 5px;
 }
 
 .char-portrait {
@@ -108,8 +105,7 @@ img {
     background: #445;
     color: #eee;
     display: grid;
-    border: .5px solid #eee;
-    border-radius: 5px;
+    border-right: .5px solid #eee;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1.75rem 1.75rem minmax(2rem, auto);
     grid-template-areas:

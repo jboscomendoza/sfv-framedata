@@ -5,14 +5,18 @@ import json
 from markupsafe import escape
 
 
-app = Flask(__name__)
-
-
 with open("SFVFrameData.json") as json_file:
     FRAME_DATA = json.load(json_file)
 
 
 CHAR_NAMES = FRAME_DATA.keys()
+
+
+app = Flask(__name__)
+
+@app.context_processor
+def add_char_names(char_names=CHAR_NAMES):
+    return {"char_names": char_names}
 
 
 def extract_stats(char, fd=FRAME_DATA):
