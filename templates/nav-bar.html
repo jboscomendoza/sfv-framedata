@@ -32,6 +32,18 @@
                     {% endfor %}
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Personajes (Tabla)
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {% for nombre in char_names %}
+                        <li><a class="dropdown-item" href= {{ url_for("character_table_page", char = nombre) }} > 
+                            {{ nombre }}
+                        </a></li>
+                    {% endfor %}
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

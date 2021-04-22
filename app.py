@@ -76,6 +76,14 @@ def character_boot_page(char):
     return render_template("character-boot.html", char=char, 
     stat_dict=stat_dict, fd_dict=fd_dict)
 
+@app.route("/table/<string:char>/", methods=("GET", "POST"))
+def character_table_page(char):
+    stat_dict = extract_stats(char)
+    fd_dict   = extract_fd(char)
+
+    return render_template("character-table.html", char=char, 
+    stat_dict=stat_dict, fd_dict=fd_dict)
+
 
 if __name__ == "__main__":
     app.run()
