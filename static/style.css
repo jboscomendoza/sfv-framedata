@@ -41,6 +41,10 @@ img {
     }
 }
 
+div {
+    text-align: center;
+}
+
 .cell-stats {
     display: grid;
     max-width: 100%;
@@ -59,7 +63,7 @@ img {
 }
 
 .img-index {
-    
+   
 }
 
 .char-container {
@@ -119,23 +123,6 @@ img {
     }
 }
 
-.fd-container {
-    text-align: center;
-    background: #445;
-    color: #eee;
-    display: grid;
-    border-right: .5px solid #eee;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1.75rem 1.75rem minmax(2rem, auto);
-    grid-template-areas:
-        "fd-hed   fd-hed   fd-hed   fd-hed    fd-hed"
-        "fd-nam-S fd-nam-A fd-nam-R fd-nam-oH fd-nam-oB"
-        "fd-val-S fd-val-A fd-val-R fd-val-oH fd-val-oB";
-    align-items: stretch;
-}
-
-    
-
 
 .fd-container {
     text-align: center;
@@ -159,6 +146,8 @@ img {
     padding-top: .25rem;
     padding-bottom: .25rem;
     overflow-wrap: anywhere;
+    background: #445;
+    color: #eee;
 }
 
 .fd-name {
@@ -166,6 +155,8 @@ img {
     padding-top: .25rem;
     padding-bottom: .25rem;
     justify-self: stretch;
+    background: #445;
+    color: #eee;
 }
 
 .fd-value {
