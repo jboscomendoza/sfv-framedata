@@ -20,9 +20,10 @@ def add_char_names(char_names=CHAR_NAMES):
 
 
 def extract_stats(char, fd=FRAME_DATA):
-    stat_keys   = ["fastestNormal", "bestReversal", "fDash", "bDash"]
-    stat_short  = ["fst", "rev", "dfw", "dbw"]
+    stat_keys   = ["health", "stun", "fastestNormal", "bestReversal", "fDash", "bDash"]
+    stat_short  = ["hlt", "stn", "fst", "rev", "dfw", "dbw"]
     stat_names  = [
+            "Salud", "Aturdimiento",
             u"Normal más rápido", "Mejor reversal", 
             "Dash hacia adelante", u"Dash hacia atrás", 
     ]

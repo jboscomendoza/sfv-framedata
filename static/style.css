@@ -45,6 +45,8 @@ div {
     text-align: center;
 }
 
+
+
 .cell-stats {
     display: grid;
     max-width: 100%;
@@ -123,6 +125,10 @@ div {
     }
 }
 
+.index-columns {
+    padding-left: 0;
+    padding-right: 0;
+}
 
 .fd-container {
     text-align: center;

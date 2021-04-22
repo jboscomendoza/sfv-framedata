@@ -2,22 +2,27 @@
 {% block title %}SFV Frame Data{% endblock %}
 
 {% block content %}
-<div class="grid-chars">
+
+<div class="container-fluid">
+  <div class="row">
     {% for char in char_names %}
-    <div class="cell-stats">
-      <div class="cell-title">
-        {{ char }}
+      <div class="index-columns col-6 col-md-4 col-lg-3">
+          <div class="fd-head col-12">
+            {{ char }}
+          </div>
+          <div class="col-12">
+              <a href={{ url_for("character_table_page", char = char) }}>
+              <img 
+                class="img-index"
+                src={{url_for('static', filename = "img-char/"+char+".jpg")}}
+              >
+            </a>
+          </div>
+        
       </div>
-      <div>
-        <a href={{ url_for("character_page", char = char) }}>
-          <img 
-            class="img-index"
-            src={{url_for('static', filename = "img-char/"+char+".jpg")}}
-          >
-        </a>
-      </div>
-    </div>
     {% endfor %}
+  </div>
 </div>
+
 
 {% endblock %}
